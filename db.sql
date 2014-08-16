@@ -1,4 +1,9 @@
+CREATE DATABASE noticia;
+GO
+USE noticia;
+GO
 DROP TABLE IF EXISTS `noticias`;
+GO
 CREATE TABLE `noticias` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(200) NOT NULL,
