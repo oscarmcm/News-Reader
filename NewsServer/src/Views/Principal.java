@@ -9,6 +9,7 @@ package Views;
 import Code.News;
 import Code.NewsInterface;
 import static java.lang.Thread.sleep;
+import java.net.InetAddress;
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -99,13 +100,15 @@ public class Principal extends javax.swing.JFrame {
 
     private void btIniciarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btIniciarMouseClicked
         int numPuertoRMI = 1099;
+        String ip;
         try {
             Request r= new Request();            
             r.Processing();
             
             News server = new News();
             Registry registro = LocateRegistry.createRegistry(numPuertoRMI);
-            Naming.rebind("rmi://localhost/NEWS", server);
+            ip = InetAddress.getLocalHost().getHostAddress();
+            Naming.rebind("rmi://"+ip+"/NEWS", server);
             this.jlbServer.setVisible(true);
             this.btIniciar.setEnabled(false);
             
