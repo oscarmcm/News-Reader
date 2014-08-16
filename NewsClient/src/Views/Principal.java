@@ -34,17 +34,32 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        tfUsername = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jlbPutIP = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         tfIPServer = new javax.swing.JTextField();
         btIniciar = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        tfUsername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfUsernameActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Username");
+
+        jlbPutIP.setForeground(new java.awt.Color(255, 0, 0));
+        jlbPutIP.setText("Campos Vacíos");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel4.setText("Notizas Cliente");
+
         jLabel1.setText("IP del Servidor");
 
-        tfIPServer.setText("localhost");
         tfIPServer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfIPServerActionPerformed(evt);
@@ -58,96 +73,111 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jLabel4.setText("Notizas Cliente");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                .addGap(95, 95, 95)
-                .addComponent(btIniciar)
-                .addGap(187, 187, 187))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(159, 159, 159))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(81, 81, 81)
-                        .addComponent(tfIPServer, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(49, 49, 49))))
+            .addGap(0, 439, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(62, 62, 62)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(jLabel1)
+                            .addGap(81, 81, 81)
+                            .addComponent(tfIPServer, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(jLabel3)
+                            .addGap(105, 105, 105)
+                            .addComponent(tfUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jlbPutIP, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(57, 57, 57)
+                                    .addComponent(jLabel4))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(92, 92, 92)
+                                    .addComponent(btIniciar)))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap(63, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(jLabel4)
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(tfIPServer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(19, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btIniciar)
-                        .addGap(27, 27, 27))))
+            .addGap(0, 153, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(1, 1, 1)
+                    .addComponent(jLabel4)
+                    .addGap(29, 29, 29)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel1)
+                        .addComponent(tfIPServer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel3)
+                        .addComponent(tfUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jlbPutIP)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btIniciar)
+                    .addGap(2, 2, 2)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void tfUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfUsernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfUsernameActionPerformed
+
+    private void tfIPServerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfIPServerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfIPServerActionPerformed
+
     private void btIniciarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btIniciarMouseClicked
-        String user = "Jon";
-        
-        String ip = this.tfIPServer.getText();
         try {
+            if (this.tfIPServer.getText().equals("")||this.tfUsername.getText().equals("")) {
+                this.jlbPutIP.setVisible(true);
+            } else {
+                String ip = this.tfIPServer.getText();
+                String user = this.tfUsername.getText();
                 NewsInterface News = (NewsInterface) Naming.lookup("rmi://" + ip + ":1099/NEWS");
                 String result = News.getNoticias(user);
-                News.send("Cliente "+user+" Conectado");
-                
+                String s = "Cliente Conectado: ";
+                News.send(s+user);
                 LoggedPrintStream lpsOut = LoggedPrintStream.create(System.out);
                 System.setOut(lpsOut);
-                
-                
-                
+
+                //System.out.println(result);
+
                 StringTokenizer tokens = new StringTokenizer(result, "#");
-                int i=0;
+                int i = 0;
                 String[] texto = new String[5];
-                while(tokens.hasMoreTokens()){
-                    
-                    texto[i]  = tokens.nextToken();
+                while (tokens.hasMoreTokens()) {
+                    //System.out.println(tokens.nextToken());
+                    texto[i] = tokens.nextToken();
                     i++;
                 }
-                Notizas  noticia= new Notizas();
+
+                System.out.println("/////");
+                dispose();
+
+                Notizas noticia = new Notizas();
                 noticia.setTitle("Lector de Noticias");
-                
+                noticia.setVisible(true);
+
                 noticia.jLabel3.setText(texto[0]);
                 noticia.jLabel4.setText(texto[1]);
                 noticia.jLabel7.setText(texto[2]);
                 noticia.jLabel8.setText(texto[3]);
                 noticia.jLabel11.setText(texto[4]);
-                    
-                dispose();       
-                noticia.setVisible(true); 
- 
-            } catch (Exception e) {
-                System.out.println("Server failed: " + e);
-            }
-    }//GEN-LAST:event_btIniciarMouseClicked
 
-    private void tfIPServerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfIPServerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfIPServerActionPerformed
+            }
+        } catch (Exception e) {
+            System.out.println("Server failed: " + e);
+        }
+    }//GEN-LAST:event_btIniciarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -187,8 +217,10 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btIniciar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jlbPutIP;
     private javax.swing.JTextField tfIPServer;
+    private javax.swing.JTextField tfUsername;
     // End of variables declaration//GEN-END:variables
 }
