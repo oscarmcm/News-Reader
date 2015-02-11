@@ -1,4 +1,4 @@
 News-Reader
 ===========
 
-Simple News Reader in java using RMI
+This is news reader, that uses the hackernews api and Java RMI, this proyect is only for educational purpose. 
